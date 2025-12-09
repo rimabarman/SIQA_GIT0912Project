@@ -8,6 +8,7 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: WmSalesforceRESTProvider
+  version: 10.7.0.0.197
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 services:
@@ -27,6 +28,44 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2105
+- serviceName: project.siqa_git0912.integrations:Call_refData
+  packages:
+  - name: SIQA_GIT0912Project
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.siqa_git0912.referencedata:refData
+  packages:
+  - name: SIQA_GIT0912Project
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.siqa_git0912.integrations:Sum
+  packages:
+  - name: SIQA_GIT0912Project
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2105
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2105
+- serviceName: project.siqa_git0912.integrations:Test_RestConnector
+  packages:
+  - name: SIQA_GIT0912Project
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.siqa_git0912.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.operations.actions:TestRest
+  packages:
+  - name: SIQA_GIT0912Project
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
 - serviceName: project.siqa_git0912.integrations:deepclonetest
   packages:
   - name: SIQA_GIT0912Project
@@ -79,7 +118,7 @@ configurationVariables:
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.oauth_v20.authorizationServerUrl
   : https://login.salesforce.com/services/oauth2/authorize
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.oauth.accessToken
-  : "{AES}h1r1CmTvU65r25EqPgWKVdizBZ1CQSjcnxIwmduOKo84luvevzuTQFaXif2zcqBmfIr4g5Yh4LPBWI+k0UTTxNVGuBdE2HBvfKd5xVcNypLO0lcQZbC6G8Ndg3HfbLrNPdw1mGt+t2tyCT3WsO7fD2mK1wuN3U1rA1B0VhuZoUw="
+  : "{AES}h1r1CmTvU65r25EqPgWKVYwSxy/x4xLCfiQ/HjFcUA2nzT4wYluB2LlistMztzUHHqJFFO9QFk+P8cFvbzSMc/7DTtFvR0oCTeBg18SpCTzYHzcON3RWCtZujZUyKnNxiNcwhSjuEYf24LdtyWs5tmmK1wuN3U1rA1B0VhuZoUw="
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.cn.retryCount
   : "4"
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.cn.readTimeout
@@ -106,6 +145,8 @@ configurationVariables:
   : "{AES}z0OyKRGMCuSrw5+VwAKX9/oM6BIKjPeYnDaBN96E5WE51ihADTbuVPxNgEzibj4QruD7dprkqIUz2A2UuAroPCo9lkD9cn9+IyICeILx3/1l3xiIkjokSOR4joVg6CJF"
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.cn.validateAfterInactivity
   : "1000"
+  ? iscloudstreamsconnectorservice.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.virtualServiceName
+  : WmCloudStreams.RestVS
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.minimumPoolSize
   : "1"
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.cn.socketLinger
@@ -120,6 +161,8 @@ configurationVariables:
   : 3MVG9k02hQhyUgQCKlnwOVc1lTfY9AqPHmUIRA6I.ZqYzln.F3Vuok.Rk6d6F00IhbOJxstGzhIJDyuJGd0ft
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.oauth_v20.authenticationServerUrl
   : https://login.salesforce.com/services/oauth2/token
+  ? iscloudstreamsconnectorservice.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.connectionAlias
+  : project.siqa_git0912.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:MyConnAlias
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.cn.enableSNI
   : "true"
   ? cloudstreamsconnection.project..siqa_git0912..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:MyConnAlias.oauth_v20.authorizationHeaderInTokenRefresh
